@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Instafetch.js</title>
+  <meta name="author" content="Thomas Vaeth">
+  <meta name="description" content="Instafetch.js is a 3KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
+  <meta property="og:title" content="Instafetch.js">
+  <meta property="og:url" content="http://thomasvaeth.com/instafetch.js/">
+  <meta property="og:site_name" content="Instafetch.js">
+  <meta property="og:description" content="Instafetch.js is a 3KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
+  <meta property="og:image" content="https://unsplash.it/2000/1200?image=1058">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="Instafetch.js is a 3KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
+  <meta name="twitter:title" content="Instafetch.js">
+  <meta name="twitter:url" content="http://thomasvaeth.com/instafetch.js/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@thomasvaeth">
+  <meta name="twitter:domain" content="http://thomasvaeth.com">
+  <meta property="twitter:image" content="https://unsplash.it/2000/1200?image=1058">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|Playfair+Display">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <h1>Instafetch.js</h1>
+      <p>A 3KB JavaScript plugin for the Instagram API (without jQuery).</p>
+      <a class="header__link" href="https://github.com/thomasvaeth/instafetch.js">Download on GitHub</a>
+    </div>
+  </header>
+
+  <main>
+  <section class="instafetch">
+    <h2>Why this plugin?</h2>
+    <p>No jQuery. Why use an 87KB file only to write more JavaScript that is only being used for AJAX to return some JSONP? Let's use fetch instead. Instafetch.js is a 3KB file that returns your Instagram feed with the option of returning captions.</p>
+
+    <div id="instafetch" class="instafetch__feed"></div>
+  </section>
+
+  <section class="download">
+    <a href="https://github.com/thomasvaeth/instafetch.js">Download on GitHub</a>
+    <p>Or Contribute.</p>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__social">
+      <li><a class="fa fa-lg fa-envelope-o" href="mailto:thomas.vaeth@gmail.com"></a></li>
+      <li><a class="fa fa-lg fa-github" href="https://github.com/thomasvaeth" target="_blank"></a></li>
+      <li><a class="fa fa-lg fa-codepen" href="http://codepen.io/thomasvaeth/" target="_blank"></a></li>
+      <li><a class="fa fa-lg fa-linkedin" href="https://www.linkedin.com/in/thomasvaeth" target="_blank"></a></li>
+      <li><a class="fa fa-lg fa-twitter" href="https://twitter.com/thomasvaeth" target="_blank"></a></li>
+      <li><a class="fa fa-lg fa-facebook" href="https://www.facebook.com/thomas.vaeth" target="_blank"></a></li>
+      <li><a class="fa fa-lg fa-instagram" href="https://www.instagram.com/thomas.vaeth/" target="_blank"></a></li>
+    </ul>
+  </footer>
+
+  <script type="text/javascript" src="js/instafetch.min.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      instafetch.init({
+        userId: '3980752',
+        accessToken: '3980752.1677ed0.62bb6a2ad3ef4dc0a6aad768ab8939ab',
+        numOfPics: 1,
+        caption: true
+      });
+    });
+  </script>
+</body>
+</html>
