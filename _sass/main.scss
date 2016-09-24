@@ -185,6 +185,8 @@ ul {
 
   background: url('../images/pattern.png') $color-white;
   overflow-y: scroll;
+  will-change: opacity;
+  animation: fade-in 2s both;
 
   @media (min-width: $mq-sm) {
     top: 1.5em;
@@ -340,6 +342,11 @@ ul {
       color: $color-black;
     }
   }
+}
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 @import '_prism';
