@@ -24,8 +24,7 @@ pre[class*="language-"],
     background: $color-black;
 }
 pre[class*="language-"] {
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 pre[class*="language-"] {

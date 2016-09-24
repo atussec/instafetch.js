@@ -144,9 +144,13 @@ img {
 pre {
   max-width: $mq-xxl;
   margin: 0 auto;
-  padding: 2em;
+  padding: 1em;
 
   text-align: left;
+
+  @media (min-width: $mq-sm) {
+    padding: 2em;
+  }
 }
 
 pre + pre {
