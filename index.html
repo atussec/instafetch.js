@@ -30,6 +30,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 <body>
+  <div class="container">
   <header class="header">
     <div class="header__container">
       <h1>Instafetch.js</h1>
@@ -41,9 +42,28 @@
   <main>
   <section class="instafetch">
     <h2>Why this plugin?</h2>
-    <p>No jQuery. Why use an 87KB file only to write more JavaScript that is only being used for AJAX to return some JSONP? Let's use fetch instead. Instafetch.js is a 3KB file that returns your Instagram feed with the option of returning captions.</p>
+    <p>No jQuery. Why use an 87KB file only to write more JavaScript that is only being used for AJAX to return some JSONP? Let's use fetch instead. Instafetch.js is a 3KB file that returns your Instagram feed with the option of including captions.</p>
 
     <div id="instafetch" class="instafetch__feed"></div>
+  </section>
+
+  <section class="demo">
+    <h2>How to Use</h2>
+    <p>The Instagram API uses the OAuth 2.0 protocol, so you're going to need an access token. The easiest way to get your access token is login to Instagram on your computer and generate one on <a href="http://instagram.pixelunion.net/" target="_blank">Pixel Union</a>. The user ID is the first set of numbers in the access token.</p>
+<pre class="language-markup"><code><script type="text/plain">
+<div id="instafetch"></div>
+</script>
+</code></pre>
+<pre class="language-js"><code>instafetch.init({
+  userId: 'USER ID',
+  accessToken: 'ACCESS TOKEN',
+  target: 'instafetch',
+  numOfPics: 20,
+  caption: false
+});
+</code></pre>
+    <p>Instafetch.js will look for an element with the ID of instafetch by default. The target element can be changed when initializing the plugin.</p>
+    <p>The plugin also allows you to set the number of items to return from your feed and if you want to include the captions.</p>
   </section>
 
   <section class="download">
@@ -63,7 +83,9 @@
       <li><a class="fa fa-lg fa-instagram" href="https://www.instagram.com/thomas.vaeth/" target="_blank"></a></li>
     </ul>
   </footer>
+  </div>
 
+  <script type="text/javascript" src="js/prism.min.js"></script>
   <script type="text/javascript" src="js/instafetch.min.js"></script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {

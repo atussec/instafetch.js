@@ -1,12 +1,24 @@
 $font-header: 'Montserrat', sans-serif;
 $font-body: 'Playfair Display', serif;
 
+$color-white: #fff;
+$color-black: #000;
+
 $mq-xs: 20em;
 $mq-sm: 30em;
 $mq-md: 54em;
 $mq-lg: 64em;
 $mq-xl: 76.5em;
 $mq-xxl: 114em;
+
+%width {
+  width: 95%;
+  margin: 0 auto;
+
+  @media (min-width: $mq-md) {
+    width: 90%;
+  }
+}
 
 %letter-spacing {
   letter-spacing: 0.05em;
@@ -21,6 +33,9 @@ body {
   font-family: $font-body;
   font-size: 100%;
   line-height: 1.6;
+  color: $color-black;
+  // Instagram gradient --> http://codepen.io/amoralov/pen/VaOXGR
+  background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
 
   @media (min-width: $mq-xs) {
     font-size: 102.5%;
@@ -56,19 +71,53 @@ h1, h2 {
 }
 
 h1 {
-  $fontSize: 3em;
+  $fontSize: 2em;
+
+  font-size: $fontSize;
 
   @media (min-width: $mq-md) {
-    font-size: $fontSize;
+    font-size: $fontSize + 1em;
   }
 
   @media (min-width: $mq-xl) {
-    font-size: $fontSize + 0.5em;
+    font-size: $fontSize + 1.5em;
   }
 }
 
+h2 {
+  $fontSize: 1.5em;
+
+  margin-bottom: 0.5em;
+
+  font-size: $fontSize;
+
+  @media (min-width: $mq-md) {
+    font-size: $fontSize + 0.5em;
+  }
+
+  @media (min-width: $mq-xl) {
+    font-size: $fontSize + 1em;
+  } 
+}
+
 p {
+  max-width: $mq-xl;
   margin: 0;
+
+  font-size: 1.25em;
+  text-align: left;
+
+  @media (min-width: $mq-lg) {
+    padding: 0 4em;
+  }
+
+  @media (min-width: $mq-xl) {
+    padding: 0 8em;
+  }
+}
+
+p + p {
+  margin-top: 1em;
 }
 
 a {
@@ -89,11 +138,37 @@ img {
   max-width: 100%;
 }
 
+pre {
+  max-width: $mq-xxl;
+  margin: 0 auto;
+  padding: 2em;
+
+  text-align: left;
+}
+
+pre + pre {
+  margin-top: 2em;
+}
+
 ul {
   margin: 0;
   padding: 0;
 
   list-style-type: none;
+}
+
+.container {
+  margin: 1em;
+
+  background: url('../images/pattern.png') $color-white;
+
+  @media (min-width: $mq-sm) {
+    margin: 1.5em;
+  }
+
+  @media (min-width: $mq-md) {
+    margin: 2em;
+  }
 }
 
 .header {
@@ -103,14 +178,9 @@ ul {
   padding: 8em 0;
 
   &__container {
-    width: 80%;
 
-    @media (min-width: $mq-sm) {
-      width: 60%;
-    }
-
-    @media (min-width: $mq-md) {
-      width: 40%;
+    p {
+      padding: 0;
     }
   }
 
@@ -120,9 +190,11 @@ ul {
 }
 
 .instafetch {
-  width: 90%;
-  margin: 0 auto;
+  @extend %width;
+
   padding: 4em 0;
+
+  text-align: center;
 
   &__feed {
     display: flex;
@@ -130,10 +202,30 @@ ul {
   }
 }
 
+.demo {
+  @extend %width;
+
+  padding: 4em 0;
+
+  text-align: center;
+
+  .language-markup {
+    margin-top: 4em;
+  }
+
+  .language-js {
+    margin-bottom: 4em;
+  }
+}
+
 .download {
   padding: 4em 0;
 
   text-align: center;
+
+  p {
+    text-align: center;
+  }
 }
 
 .footer {
@@ -147,5 +239,11 @@ ul {
     & > *:not(:last-child) {
       margin-right: 1em;
     }
+
+    a {
+      color: $color-black;
+    }
   }
 }
+
+@import '_prism';
