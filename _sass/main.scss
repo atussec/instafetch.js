@@ -184,7 +184,7 @@ ul {
   right: 1em;
 
   background: url('../images/pattern.png') $color-white;
-  overflow-y: scroll;
+  overflow-y: auto;
   will-change: opacity;
   animation: fade-in 2s both;
 
