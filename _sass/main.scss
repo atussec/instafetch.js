@@ -150,6 +150,22 @@ pre + pre {
   margin-top: 2em;
 }
 
+hr {
+  height: 1px;
+  width: 95%;
+
+  background-color: rgba($color-black, 0.1);
+  border: 0;
+
+  @media (min-width: $mq-md) {
+    width: 85%;
+  }
+
+  @media (min-width: $mq-lg) {
+    width: 75%;
+  }
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -171,6 +187,35 @@ ul {
   }
 }
 
+.github-link {
+  @extend %letter-spacing;
+
+  display: inline-block;
+  padding: 0.5em;
+
+  font-family: $font-header;
+  font-size: 1.25em;
+  color: $color-black;
+  border: 5px solid $color-black;
+  box-shadow: inset 0 0 0 0 $color-black;
+  transition: all 0.4s ease-in-out;
+
+  &:hover,
+  &:active, 
+  &:focus {
+    color: $color-white;
+    box-shadow: inset 0 100px 0 0 $color-black;
+  }
+
+  .header & {
+    margin-top: 1em;
+  }
+
+  .download & {
+    margin-bottom: 1em;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -180,12 +225,9 @@ ul {
   &__container {
 
     p {
+      margin: 0;
       padding: 0;
     }
-  }
-
-  &__link {
-
   }
 }
 
@@ -199,6 +241,24 @@ ul {
   &__feed {
     display: flex;
     justify-content: center;
+    margin-top: 2em;
+  }
+}
+
+#instafetch {
+
+  a {
+    display: block;
+
+    border: 1em solid $color-white;
+    border-bottom: 0;
+  }
+
+  div {
+    padding: 1em 0;
+
+    color: $color-black;
+    background: $color-white;
   }
 }
 
@@ -209,12 +269,17 @@ ul {
 
   text-align: center;
 
+  a {
+    color: $color-black;
+    border-bottom: 1px solid $color-black;
+  }
+
   .language-markup {
-    margin-top: 4em;
+    margin-top: 2em;
   }
 
   .language-js {
-    margin-bottom: 4em;
+    margin-bottom: 2em;
   }
 }
 
