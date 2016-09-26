@@ -54,13 +54,12 @@
 
   <section class="demo">
     <h2>How to Use</h2>
-    <p>The Instagram API uses the OAuth 2.0 protocol, so you're going to need an access token. The easiest way to get your access token is login to Instagram on your browser and generate one on <a href="http://instagram.pixelunion.net/" target="_blank">Pixel Union</a>. The user ID is just the first set of numbers in the access token.</p>
+    <p>The Instagram API uses the OAuth 2.0 protocol, so you're going to need an access token. The easiest way to get your access token is login to Instagram on your browser and generate one on <a href="http://instagram.pixelunion.net/" target="_blank">Pixel Union</a>.</p>
 <pre class="language-markup"><code><script type="text/plain">
 <div id="instafetch"></div>
 </script>
 </code></pre>
 <pre class="language-js"><code>instafetch.init({
-  userId: 'USER ID',
   accessToken: 'ACCESS TOKEN',
   target: 'instafetch',
   numOfPics: 20,
@@ -97,7 +96,6 @@
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
       instafetch.init({
-        userId: '3980752',
         accessToken: '3980752.1677ed0.62bb6a2ad3ef4dc0a6aad768ab8939ab',
         numOfPics: 1,
         caption: true
