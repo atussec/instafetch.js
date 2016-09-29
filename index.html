@@ -34,8 +34,8 @@
   <header class="header">
     <div class="header__container">
       <h1>Instafetch.js</h1>
-      <p>A 3KB JavaScript plugin for the Instagram API (without jQuery).</p>
-      <p>By Thomas Vaeth.</p>
+      <p>A 10KB JavaScript plugin for the Instagram API (without jQuery).</p>
+      <p>By Thomas Vaeth (and Brian Hague).</p>
       <a class="github-link" href="https://github.com/thomasvaeth/instafetch.js">Download on GitHub</a>
     </div>
   </header>
@@ -45,7 +45,7 @@
   <main>
   <section class="instafetch">
     <h2>Why this plugin?</h2>
-    <p>No jQuery. Why use an 87KB file only to write more JavaScript that is only being used for AJAX to return some JSONP? Let's use fetch instead. Instafetch.js is a 3KB file that returns your Instagram feed with the option of including captions.</p>
+    <p>No jQuery. Why use an 87KB file only to write more JavaScript that is only being used for AJAX to return some JSONP? Let's use fetch instead. Instafetch.js is a 10KB file that returns your Instagram feed with the option of including captions.</p>
 
     <div id="instafetch" class="instafetch__feed"></div>
   </section>
@@ -68,6 +68,13 @@
 </code></pre>
     <p>Instafetch.js will look for an element with the ID of instafetch by default. The target element can be changed when initializing the plugin.</p>
     <p>The plugin also allows you to set the number of items to return from your feed and if you want to include the captions.</p>
+  </section>
+
+  <hr/>
+
+  <section class="promise">
+    <h2>ES6 Promise Polyfill</h2>
+    <p>Instafetch.js was only 3KB initially, but those 3KB didn't support any version of Internet Explorer. IE will return "Promise is undefined" and the Instagram feed will be empty empty. That's where the ES6 Promise polyfill comes in. That extra 7KB is just for IE.</p>
   </section>
 
   <hr/>

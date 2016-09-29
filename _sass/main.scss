@@ -325,6 +325,11 @@ ul {
   }
 }
 
+.promise {
+  @extend %width;
+  @extend %section;
+}
+
 .download {
   @extend %section;
 
