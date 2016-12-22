@@ -7,15 +7,15 @@
 
   <title>Instafetch.js</title>
   <meta name="author" content="Thomas Vaeth">
-  <meta name="description" content="Instafetch.js is a 10KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
+  <meta name="description" content="Instafetch.js is a 6KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
   <meta property="og:title" content="Instafetch.js">
   <meta property="og:url" content="http://thomasvaeth.com/instafetch.js/">
   <meta property="og:site_name" content="Instafetch.js">
-  <meta property="og:description" content="Instafetch.js is a 10KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
+  <meta property="og:description" content="Instafetch.js is a 6KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
   <meta property="og:image" content="http://thomasvaeth.com/instafetch.js/images/instafetch.jpg">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="Instafetch.js is a 10KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
+  <meta name="twitter:description" content="Instafetch.js is a 6KB JavaScript plugin for the Instagram API using fetch instead of jQuery by Thomas Vaeth in Seattle, Washington.">
   <meta name="twitter:title" content="Instafetch.js">
   <meta name="twitter:url" content="http://thomasvaeth.com/instafetch.js/">
   <meta name="twitter:site" content="Trophy">
@@ -34,7 +34,7 @@
   <header class="header">
     <div class="header__container">
       <h1>Instafetch.js</h1>
-      <p>A 10KB JavaScript plugin for the Instagram API (without jQuery).</p>
+      <p>A 6KB JavaScript plugin for the Instagram API (without jQuery).</p>
       <p>By Thomas Vaeth (and Brian Hague).</p>
       <a class="github-link" href="https://github.com/thomasvaeth/instafetch.js">Download on GitHub</a>
     </div>
@@ -45,7 +45,7 @@
   <main>
   <section class="instafetch">
     <h2>Why this plugin?</h2>
-    <p>No jQuery. Why use an 87KB file only to write more JavaScript that is only being used for AJAX to return some JSONP? Let's use fetch instead. Instafetch.js is a 10KB file that returns your Instagram feed with the option of including captions.</p>
+    <p>No jQuery. Why use an 87KB file only to write more JavaScript that is only being used for AJAX to return some JSONP? Let's use fetch instead. Instafetch.js is a 6KB file that returns your Instagram feed with the option of including captions.</p>
 
     <div id="instafetch" class="instafetch__feed"></div>
   </section>
@@ -73,8 +73,8 @@
   <hr/>
 
   <section class="promise">
-    <h2>ES6 Promise Polyfill</h2>
-    <p>Instafetch.js was only 3KB initially, but those 3KB didn't support any version of Internet Explorer. IE will return "Promise is undefined" and the Instagram feed will be empty. That's where the ES6 Promise polyfill comes in. That extra 7KB is just for IE.</p>
+    <h2>Promise Polyfill</h2>
+    <p>Instafetch.js was only 3KB initially, but those 3KB didn't support any version of Internet Explorer. IE will return "Promise is undefined" and the Instagram feed will be empty. Version 1.2 included the ES6-Promise polyfill, which added an extra 7KB just for IE. Version 1.3 removed the ES6-Promise polyfill for another Promise polyfill that only added 3KB.</p>
   </section>
 
   <hr/>
