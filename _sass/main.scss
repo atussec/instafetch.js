@@ -278,8 +278,11 @@ ul {
 
 #instafetch {
 
-  article {
+  a {
     position: relative;
+
+    display: block;
+    padding: 0.5em 0.5em 0;
 
     border: 1px solid transparent;
     box-shadow: 0 1px 1px rgba($color-black, 0.1);
@@ -287,6 +290,10 @@ ul {
     cursor: pointer;
     transform: translate3d(0, 0, 0);
     transition: all 1s ease;
+
+    @media (min-width: $mq-sm) {
+      padding: 1em 1em 0;
+    }
 
     &:after {
       content: "";
@@ -312,18 +319,6 @@ ul {
       &:after {
         opacity: 1;
       }
-    }
-  }
-
-  a {
-    display: block;
-
-    border: 0.5em solid $color-white;
-    border-bottom: 0;
-
-    @media (min-width: $mq-sm) {
-      border: 1em solid $color-white;
-      border-bottom: 0;
     }
   }
 
